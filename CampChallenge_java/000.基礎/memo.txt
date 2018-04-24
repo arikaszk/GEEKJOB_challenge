@@ -1,0 +1,7 @@
+鈴木のパソコンのスペック
+
+OS：macOS High Sierra
+   バージョン 10.13.4
+CPU：1.4GHz intel Core i5
+メモリ：4GB
+ストレージ：Mackintosh HD 128GB
