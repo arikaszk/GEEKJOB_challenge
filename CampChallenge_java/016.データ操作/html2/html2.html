@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HTMLについて</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="html2.css">
+    </head>
+    <body>
+        <div>
+            <h1 class="TITLE" id="top">HTMLについて</h1>
+        </div>
+        <div class="all">
+            <div class="nav">
+                <ul>
+                    <li><a href=#FIFTH>ご意見</a></li>
+                    <li><a href=#top>トップ</a></li>
+                </ul>
+            </div>
+            <div class="left">
+                <ul>
+                    <li class="menu"><b>◆ menu ◆</b></li>
+                    <li>1.<a href=#one>HTMLって？</a></li>
+                    <li>2.<a href=#two>HTMLのタグ</a></li>
+                    <li>3.<a href=#three>実際に書いてみる</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="sub">
+                    <h2 class="HEADLINE" id="one">HTMLって？</h2>
+                    <p>
+                        私たちが普段、何気なく見ているウェブページ。<br>
+                        そのほとんどが、『<b>HTML</b>』と『<b>CSS</b>』という言語で作られています。<br>
+                        「じゃあ、そのふたつの違いって？」という方にざっくり説明するとこんな感じ。
+                    </p>
+                    <div class="BOX">
+                        <table>
+                            <tr>
+                                <th><b>HTML</b></th>
+                                <th><b>CSS</b></th>
+                            </tr>
+                            <tr>
+                                <td>人間で例えると顔のパーツ<br>
+                                ウェブページの骨組みを作り上げる</td>
+                                <td>人間で例えるとお化粧<br>
+                                見やすいようにパーツを配置し装飾する</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>
+                        JavaScriptなどウェブページに使われる言語は他にもありますが、今回は『<b>HTML</b>』について学習したいと思います！
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="HEADLINE" id="two">HTMLのタグ</h2>
+                    <p>
+                        他の多くのウェブページと同じく、このページもHTMLで作られています。<br>
+                        このページがどのように作られているかというと……
+                    </p>
+                    <div>
+                        <img class="page" src="htmlimg.jpg" alt="ソースコード">
+                    </div>
+                    <p>
+                        こんな感じ！
+                    </p>
+                    <p>
+                        今見えているページとはだいぶ違うのがお分かりいただけると思います。<br>
+                        文章の前後に付いているこの青い文字。これがHTMLではかなり重要な『<b>タグ</b>』です。<br>
+                        <br>
+                        タグとは、簡単に言うと『<b>文字に役割を与えてあげる印</b>』です。<br>
+                        たとえばページのタイトルであったり、見出しであったり、段落であったり。<br>
+                        同じ文章の中にも様々な役割がありますが、ただただ文字として打ってしまうと、
+                        コンピューターは全て同じものとして認識してしまいます。<br>
+                        <br>
+                        そこでそれぞれに「あなたはタイトルね」「あなたは見出しね」など、
+                        役割を与えてあげるのがタグなのです！<br>
+                        <br>
+                        タグの使い方は至ってシンプルです。<br>
+                    </p>
+                    <div class="BOX">
+                        <p class="first"><span class="ch">&lt;開始タグ&gt;</span>印をつけたい文字<span class="ch">&lt;終了タグ&gt;</span></p>
+                    </div>
+                    <p>
+                        このように印をつけたい文字の前と後ろに、開始タグと終了タグを付けてあげれば良いのです。<br>
+                        また、開始タグと終了タグは非常に似通っており、終了タグには『/（スラッシュ）』を付けるだけです。
+                    </p>
+                    <div class="BOX">
+                        <h4>【例1】見出し</h4>
+                        <p class="first"><span class="ch">&lt;h1&gt;</span>HTMLについて<span class="ch">&lt;/h1&gt;</span></p>
+                        <p>
+                            これで「HTMLについて」という文字に&lt;h1&gt;という役割が与えられました<br>
+                            &lt;h1&gt;のhというのは『heading（見出し）』という意味です<br>
+                            <br>
+                            見出しにも種類があり、
+                        </p>
+                        <div class="first">
+                          <h1>これはh1の見出しです</h1>
+                          <h2>これはh2の見出しです</h2>
+                          <h3>これはh3の見出しです</h3>
+                          <h4>これはh4の見出しです</h4>
+                          <h5>これはh5の見出しです</h5>
+                          <h6>これはh6の見出しです</h6>
+                        </div>
+                        <p>
+                            このようにhの後に続く数字が大きくなるに連れて、文字のサイズが小さくなっていきます。
+                        </p>
+                    </div>
+                    <div class="BOX">
+                        <h4>【例2】段落</h4>
+                        <p class="first"><span class="ch">&lt;p&gt;</span>今回は『HTML』について学習したいと思います！<span class="ch">&lt;/p&gt;</span></p>
+                        <p>
+                            これで「今回は『HTML』について学習したいと思います！」に&lt;p&gt;という役割が与えられました<br>
+                            &lt;p&gt;のpというのは『paragraph』のpです<br>
+                            文章の長さに規定はなく、開始タグから終了タグまでの間の文章が丸ごと一つの段落となります
+                        </p>
+                    </div>
+                    <p>
+                        上に紹介したふたつが、HTMLでもよく使用されるタグです。<br>
+                        他にもいくつかご紹介します。
+                    </p>
+                    <div class="BOX">
+                        <table>
+                            <tr>
+                                <th>タグ名</th>
+                                <th>タグの役割</th>
+                            </tr>
+                            <tr>
+                                <td>html</td>
+                                <td>文書の中のどこからどこまでの部分がHTMLかを表す</td>
+                            </tr>
+                            <tr>
+                                <td>head</td>
+                                <td>そのウェブページの情報を書き込む場所を表す<br>
+                                ここに書き込まれた内容はウェブページ上には表示されない</td>
+                            </tr>
+                            <tr>
+                                <td>body</td>
+                                <td>ウェブページの画面に表示される場所を表す</td>
+                            </tr>
+                            <tr>
+                                <td>li</td>
+                                <td>箇条書きにする<br>※&lt;ul&gt;タグで囲む必要がある</td>
+                            </tr>
+                            <tr>
+                                <td>br</td>
+                                <td>改行をする<br>※終了タグは必要ない</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="sub">
+                    <h2 class="HEADLINE" id="three">実際に書いてみる</h2>
+                    <p>
+                        ここまでHTMLの基本を説明してきましたが、今度は実際に簡単なコードを書いてみたいと思います。<br>
+                        <br>
+                        <b>用意するもの</b>
+                    </p>
+                    <ul>
+                        <li>パソコン</li>
+                        <li>テキストエディタ（Macならテキストエディット、Windowsならメモ帳でOK！）</li>
+                        <li>インターネットブラウザ（Safari、Google Crome、Fire Fox、Internet Explorerなど）</li>
+                    </ul>
+                    <div>
+                        <p>まずはテキストエディタに以下の文章をコピペします</p>
+                        <div class="BOX">
+                            <div class="first">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &lt;head&gt;<br>
+                            &emsp;&emsp;&lt;title&gt;HTMLを学ぶ&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &emsp;&emsp;&lt;h1&gt;HTMLの使い方&lt;/h1&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                          </div>
+                        </div>
+                        <p>あとは、&lt;body&gt;と&lt;/body&gt;の間に好きな文字を打ち込んでみましょう！</p>
+                        <div class="BOX">
+                            <div class="first">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &lt;head&gt;<br>
+                            &emsp;&emsp;&lt;title&gt;HTMLを学ぶ&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &emsp;&emsp;&lt;h1&gt;HTMLの使い方&lt;/h1&gt;<br>
+                            &emsp;&emsp;&lt;p&gt;これで簡単なウェブページの作成ができます！&lt;/p&gt;<br>
+                            &emsp;&emsp;&lt;ul&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;li&gt;ウェブページは『HTML』と『CSS』でできている&lt;/li&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;li&gt;HTMLではタグで文字を囲うことで印をつける&lt;/li&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;li&gt;終了タグが必要ないタグもある&lt;/li&gt;<br>
+                            &emsp;&emsp;&lt;/ul&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                          </div>
+                        </div>
+                        <p>これを[ファイル]→[保存]から拡張子を『.html』にして保存<br>
+                        あとはそのファイルをブラウザを使用して開くだけです！</p>
+                    </div>
+                </div>
+                <div class="sub">
+                    <h2 class="HEADLINE" id="FORTH">さいごに</h2>
+                    <p>
+                        ここで触れたHTMLに関しての知識は、ほんの一部の、いわゆる導入部分となります。<br>
+                        これ以外にも機能が充実しているので、気になった人は自分で調べて観ましょう！<br>
+                        <br>
+                        また、下記のフォームよりご意見・ご感想お待ちしています！
+                    </p>
+                </div>
+                <div class="BOX2">
+                    <h3 id="FIFTH">ご意見・ご感想・お問い合わせ</h3>
+                    <form class="FORM" method="POST" action="html2.jsp">
+                        <table>
+                            <tr>
+                                <td class="one">ニックネーム：</td>
+                                <td class="two"><input class="name" type="text" name="NAME"></td>
+                            </tr>
+                            <tr>
+                                <td class="one">性別：</td>
+                                <td class="two">男<input type="radio" name="GENDER" value="男" checked>&emsp;
+                                    女<input type="radio" name="GENDER" value="女">&emsp;
+                                    その他<input type="radio" name="GENDER" value="その他"></td>
+                            </tr>
+                            <td colspan=2><textarea class="textArea" name="TEXT" cols="50" rows="40" wrap="hard"></textarea></td>
+                        </table>
+                        <input class="submitbtn" type="submit" name="SUBMIT">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p><a href=#top><input type="button" value="このページのトップへ戻る" class="btn"></a></p>
+        </div>
+    </body>
+</html>
