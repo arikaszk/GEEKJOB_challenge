@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>クエリストリングの利用</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form method="GET" action="queryString.jsp">
+                <table>
+                    <tr>
+                        <td align="right">合計金額：</td>
+                        <td><input type="number" name="total" value="1500"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">個数：</td>
+                        <td><input type="number" name="count" value="10"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">種類：</td>
+                        <td><input type="radio" name="type" value="1" id="zakka">
+                            <label for="zakka">雑貨</label>
+                            <input type="radio" name="type" value="2" id="shokuhin" checked>
+                            <label for="shokuhin">生鮮食品</label>
+                            <input type="radio" name="type" value="3" id="other">
+                            <label for="other">その他</label>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" name="submit" value="購入する">
+            </form>
+        </div>
+    </body>
+</html>
