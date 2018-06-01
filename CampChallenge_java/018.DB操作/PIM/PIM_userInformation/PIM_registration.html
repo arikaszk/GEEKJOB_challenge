@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>商品情報管理ページ -管理者登録</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function checkPass() {
+                var pass = registration.passwordR.value;
+                var passch = registration.passwordRch.value;
+                if(pass !== passch){
+                    alert('入力されたパスワードが一致しません');
+                    return false;
+                } else {
+                    return true;
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="contents">
+            <div class="registrationBox">
+                <h2>商品管理者登録</h2>
+                <p>ログインは<a href="PIM_login.jsp">こちら</a></p>
+                <form method="GET" action="PIM_registration_entry.jsp" name="registration">
+                    <div id="errormessage"></div>
+                    <table>
+                        <tr>
+                            <td align="right">氏名</td>
+                            <td>姓：<input type="text" name="name1" size="15" placeholder="例)山田" required>
+                                名：<input type="text" name="name2" size="15" placeholder="例)太郎" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right">ログインID<br>(半角英数字 4-20文字)</td>
+                            <td><input type="text" name="loginIDR" size="30" placeholder="例)hoge1234" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right">パスワード<br>(半角英数字 4-20文字)</td>
+                            <td><input type="password" name="passwordR" id="passwordR" size="30" placeholder="例)password1" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right">パスワード(確認用)</td>
+                            <td><input type="password" name="passwordRch" id="passwordRch" size="30" placeholder="パスワードを再入力してください" required></td>
+                        </tr>
+                    </table>
+                    <input type="submit" name="SUBMITR" class="submitBTN" value="管理者登録" onclick="checkPass()">
+                </form>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </body>
+</html>
