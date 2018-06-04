@@ -19,7 +19,8 @@ import java.util.ArrayList;
  * ・nが52より大きくても正常に動作するが、nが0以下の場合はエラーを返す
  * 
  * userクラス
- * ・入力された数値nをユーザの人数として返す
+ * ・start: カード配布先のユーザの人数をキーボード入力から受け取る
+ * ・open: 手札をユーザごとに一行ずつ表示する
  */
 public class user {
     //startという公開メソッド
@@ -51,12 +52,16 @@ public class user {
     //
     public void open(ArrayList<ArrayList<String>> list){
         for(int i = 0; i < list.size(); i++){
-            System.out.print((i + 1) + "人目：");
-            System.out.print(list.get(i).get(0));
-            for(int m = 1; m < list.get(i).size(); m++){
-                System.out.print("," + list.get(i).get(m));
+            if(!list.get(i).get(0).equals("")){
+                System.out.print((i + 1) + "人目：");
+                System.out.print(list.get(i).get(0));
+                for(int m = 1; m < list.get(i).size(); m++){
+                    System.out.print("," + list.get(i).get(m));
+                }
+                System.out.println("");
+            } else {
+                System.out.println((i + 1) + "人目：カードはありません");
             }
-            System.out.println("");
         }
     }
 }

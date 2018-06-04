@@ -5,7 +5,6 @@
 package dealcards;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  *【スペード、ハート、ダイア、クラブの4種類、52枚のトランプをユーザn人に配布する】
@@ -19,7 +18,7 @@ import java.util.Random;
  * ・cards: 山札の宣言
  * ・setcards: 山札にトランプをセット
  * ・userHand: ユーザの手札を宣言
- * ・deal: 山札からランダムにカードを一枚引く
+ * ・deal: 山札から引数に応じてカードを選択
  * ・handset: 山札から引いたカードをユーザの手札に追加
  */
 public class setcards {
