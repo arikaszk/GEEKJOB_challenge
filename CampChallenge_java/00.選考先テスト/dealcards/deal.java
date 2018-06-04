@@ -5,6 +5,7 @@
 package dealcards;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 /**
@@ -32,9 +33,30 @@ public class deal {
             ArrayList<ArrayList<String>> user = setc.userHand(n);
             //ユーザに一枚ずつカードを配布
             int cardnum = setc.cards.size();
+            //重複チェックようのArrayList
+            ArrayList<Integer> ch = new ArrayList<>();
             while(cardnum > 0){
                 for(int i = 0; i < user.size(); i++){
-                    user.get(i).add(setc.deal());
+                    Random rand = new Random();
+                    int a = 0;
+                    boolean flag = false;
+                    //「flagがtrueになる = 重複なし」
+                    while(!flag){
+                        int check = 0;
+                        a = rand.nextInt(setc.cards.size());
+                        for(int m = 0; m < ch.size(); m++){
+                            if(ch.get(m) == a){
+                                break;
+                            } else {
+                                check++;
+                            }
+                        }
+                        if(check == ch.size()){
+                            ch.add(a);
+                            flag = true;
+                        }
+                    }
+                    user.get(i).add(setc.deal(a));
                     cardnum--;
                     if(cardnum == 0){
                         break;
