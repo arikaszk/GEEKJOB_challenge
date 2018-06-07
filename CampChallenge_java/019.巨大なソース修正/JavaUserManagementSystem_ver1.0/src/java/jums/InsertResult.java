@@ -3,6 +3,8 @@ package jums;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Calendar;
+import java.util.Enumeration;
+import java.util.Iterator;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,10 +35,19 @@ public class InsertResult extends HttpServlet {
         HttpSession session = request.getSession();
         
         try{
+            request.setCharacterEncoding("UTF-8");//セッションに格納する文字コードをUTF-8に変更
+            String accesschk = request.getParameter("ac2");
+            if((Integer)session.getAttribute("ac2")!=Integer.parseInt(accesschk) || accesschk ==null){
+                throw new Exception("不正なアクセスです");
+            } else {
+            }
             //ユーザー情報に対応したJavaBeansオブジェクトに格納していく
             UserDataDTO userdata = new UserDataDTO();
             userdata.setName((String)session.getAttribute("name"));
             Calendar birthday = Calendar.getInstance();
+            birthday.set(Integer.valueOf((String) session.getAttribute("year")),
+                    (Integer.valueOf((String) session.getAttribute("month"))-1),
+                    Integer.valueOf((String) session.getAttribute("day")));
             userdata.setBirthday(birthday.getTime());
             userdata.setType(Integer.parseInt((String)session.getAttribute("type")));
             userdata.setTell((String)session.getAttribute("tell"));

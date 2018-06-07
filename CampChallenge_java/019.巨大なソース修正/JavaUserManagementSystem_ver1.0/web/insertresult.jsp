@@ -1,4 +1,6 @@
+<%@page import="java.util.Enumeration"%>
 <%@page import="javax.servlet.http.HttpSession" %>
+<%@page import="jums.JumsHelper"%>
 <%
     HttpSession hs = request.getSession();
 %>
@@ -17,5 +19,15 @@
         電話番号:<%= hs.getAttribute("tell")%><br>
         自己紹介:<%= hs.getAttribute("comment")%><br>
         以上の内容で登録しました。<br>
+        <br>
+        <%=JumsHelper.getInstance().home()%>
+        <% 
+            //セッションの削除
+            Enumeration<String> er = session.getAttributeNames();
+            while(er.hasMoreElements()) {
+                String str = (String) er.nextElement();
+                session.removeAttribute(str);
+            }
+        %>
     </body>
 </html>
